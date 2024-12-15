@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Configuration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Clock Configuration</h1>
+        </div>
+
+        <h2>WiFi Credentials</h2>
+        <label for="ssid">Select SSID:</label>
+        <select id="ssid">
+            <option value="" disabled selected>Searching...</option>
+        </select>
+        <label for="password_input">Password:</label>
+        <input placeholder="Password" type="text" id="password_input">
+        <div style="display: flex; gap: 10px;">
+            <input type="submit" id="verifyWifi" onclick="verify_wifi()" value="Verify">
+            <input type="submit" id="updateWifi" onclick="update_wifi()" value="Submit">
+            <input type="submit" id="rescan" onclick="get_available_wifi(1)" value="Rescan">
+        </div>
+        <h4 id="wifiResponse"></h4>
+    </div>
+
+</body>
+
+</html>
